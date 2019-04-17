@@ -1,0 +1,73 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body, html{
+	font-size: 20px;
+}
+
+#archtober_animation{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80vh;
+	background-color: red;
+}
+
+main{
+	position: relative;
+	margin-top: 70vh;
+	width: 100%;
+}
+
+ul{
+	list-style: none;
+	margin-bottom: 8rem;
+}
+
+li{
+	display: inline-block;
+	width: calc(100%/5);
+	padding: 0.5rem;
+	vertical-align: top;
+}
+
+li * {
+	font-size: 1rem;
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+}
+
+li h2{
+	font-family: arial;
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+}
+
+li h3{
+	margin-bottom: 0.5rem;
+}
+
+li a{
+	display: block;
+	transition: 0.1s;
+}
+
+@media(any-hover: hover){
+	li a:hover{
+		transform: translate(0, -0.25rem);
+		
+	}
+}
+
+@media(max-width: 768px){
+	li{
+		width: 50%;
+		margin-bottom: 1rem;
+	}
+}

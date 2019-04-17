@@ -20,11 +20,11 @@ body, html{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80vh;
+	height: 100vh;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 160%;
-	background-image: url("/silhouttes/archtober-4.svg");
+	background-size: 90%;
+	background-image: url("../silhouttes/archtober-silhoutte-bric-full.svg");
 /*	background-color: #D795A9;*/
 }
 
@@ -42,9 +42,10 @@ body, html{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto;
-	background-image: url("/images/archtober-logo.svg");
-	width: 80%;
-	height: 50vw;
+	background-image: url("../images/archtober-logo.svg");
+	width: 70%;
+
+	height: 43.75vw;
 	max-height: 75vh;
 }
 
@@ -100,7 +101,7 @@ li.large{
 
 
 li * {
-	font-size: 1rem;
+	font-size: 0.95rem;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -111,22 +112,22 @@ li h2, li h2 a{
 	font-weight: bold;
 }
 
-li h2{
+li h2, li h3{
 	margin-bottom: 1rem;
 }
 
-li h3{
-	margin-bottom: 2rem;
+li h4{
+	width: 48%;
+	margin-bottom: 4rem;
 }
 
 li h3, li h4{
 	font-size: 1.15rem;
-	margin-bottom: 0.5rem;
 }
 
 li a{
 	display: inline-block;
-	background-color: white;
+	background-color: #D8CDCB;
 	color: black;
 	padding-left: 0.15rem;
 	padding-right: 0.15rem;
@@ -135,7 +136,7 @@ li a{
 
 @media(any-hover: hover){
 	li a:hover{
-		background-color: #D8CDCB;
+		background-color: #D8CDCB !important;
 	}
 }
 
@@ -155,7 +156,8 @@ footer{
 	position: relative;
 	padding-bottom: 8rem;
 	padding-top: 2rem;
-	background-color: rgba(67, 22, 10, 0.95);
+	margin-top: 16rem;
+	background-color: rgba(99, 101, 105, 0.95);
 }
 
 
@@ -181,6 +183,11 @@ footer li p{
 		width: 100%;
 		display: block;
 		margin-bottom: 1rem;
+	}
+
+	li h4{
+		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	 #arch_preview li:nth-of-type(2n), #arch_preview li{

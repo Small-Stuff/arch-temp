@@ -13,6 +13,7 @@ img[src=""] {
 body, html{
 	font-size: 20px;
 	background-color: #D8CDCB;
+	scroll-behavior: smooth;
 }
 
 #archtober_animation{
@@ -49,9 +50,39 @@ body, html{
 	max-height: 75vh;
 }
 
+#intro_statement{
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+		background-color: rgba(67, 22, 10, 0.95);
+	padding: 1rem;
+	padding-bottom: 2rem;
+	margin-bottom: 4rem;
+}
+
+#intro_statement h1{
+	font-size: 1.5rem;
+	font-family: Helvetica Neue, helvetica, arial;
+	color: white;
+	line-height: 2rem;
+}
+
+#intro_statement h1 a{
+	background-color: #D8CDCB;
+	color: black;
+	text-decoration: none;
+}
+
+@media(any-hover: hover){
+	#intro_statement h1 a:hover{
+		background-color: black;
+		color: #D8CDCB;
+	}
+}
+
 main{
 	position: relative;
-	margin-top: 90vh;
+	margin-top: 83vh;
 	width: 100%;
 	margin-bottom: 4rem;
 }
@@ -125,6 +156,15 @@ li h3, li h4{
 	font-size: 1.15rem;
 }
 
+li h5{
+	font-size: 0.6rem;
+	letter-spacing: 0.08rem;
+	font-family: Helvetica Neue, Helvetica, arial;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem; 
+	color: #D8CDCB;
+}
+
 li a{
 	display: inline-block;
 	background-color: #D8CDCB;
@@ -179,6 +219,18 @@ footer li p{
 
 @media(max-width: 768px){
 	
+	#intro_statement{
+		width: 95%;
+	}
+
+	#archtober_animation{
+		height: 90vh;
+	}
+
+	main{
+		margin-top: 80vh;
+	}
+
 	.building_content{
 		width: 100%;
 		display: block;

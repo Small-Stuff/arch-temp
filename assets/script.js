@@ -68,6 +68,7 @@ Site.appendInfo = function(){
 	Site.buildings.forEach(function(building, index){
 //onmouseover="this.style.backgroundColor='${building.style.color}'" onmouseout="this.style.backgroundColor='#D8CDCB'"
 		$("#arch_preview").append(`<li class="preview_building ${building.style.size}">
+				<h5>NYCxDesign Preview</h5>
 				<h2>
 					<a href="${building.link}" target="_blank" style="background-color: ${building.style.color};">${building.title}</a>
 				</h2>

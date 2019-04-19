@@ -3,7 +3,7 @@ var Site = {};
 Site.buildings = [
 	{
 		title: "BRIC Arts | Media House",
-		time: "Monday, May 13,<br>12:00 till 1:00pm",
+		time: "Monday, May 13,<br>12:00 – 1:00pm",
 		architect: "Leeser Architecture",
 		image: "images/BRIC_Exterior_temp.jpg",
 		link: "https://archtober.org",
@@ -11,11 +11,11 @@ Site.buildings = [
 			size: "small",
 			color: "#C028B9"
 		},
-		description: "Donec sed odio dui. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+		description: "The project is a community arts center for two arts organizations. While pursuing wildly different types of work, the mission of each organization is centered around community outreach and participation. The primary project objective is the expansion of BRIC and UrbanGlass to the vacant ground floor and to visually open the building to the street. Leeser Architecture juggled complex programmatic demands and highly specific uses to create an open and accessible arts facility that can connect the community as well as invite them inside to engage with the myriad of activities occurring within.</p><p>Leeser Architecture’s renovation and expansion of this existing, under-utilized building involves two user groups, BRIC Arts | Media | Brooklyn and UrbanGlass. The project includes a full renovation of the interior space to create new theaters, television broadcasting studios, art galleries, glass workshops, media labs, classrooms, administrative and operation offices, and support spaces."
 	},
 	{
 		title: "Solomon R. Guggenheim Museum",
-		time: "Tuesday, May 14,<br>6:00 till 7:00pm",
+		time: "Tuesday, May 14,<br>6:00 – 7:00pm",
 		architect: "Frank Lloyd Wright (1959)",
 		image: "images/guggenheim.jpg",
 		link: "https://archtober.org",
@@ -27,7 +27,7 @@ Site.buildings = [
 	},
 	{
 		title: "Staten Island Lighthouse Museum",
-		time: "Wednesday, May 15,<br>6:00 till 7:00pm",
+		time: "Wednesday, May 15,<br>6:00 – 7:00pm",
 		architect: "(Architect TBD)",
 		image: "images/DJI_0046.JPG",
 		link: "https://archtober.org",
@@ -39,7 +39,7 @@ Site.buildings = [
 	},
 	{
 		title: "Noguchi Museum Renovation",
-		time: "Thursday, May 16,<br>12:00 till 1:00pm",
+		time: "Thursday, May 16,<br>12:00 – 1:00pm",
 		architect: "Isamu Noguchi (1985); renovation by Sage and Coombe Architects",
 		image: "images/3-The-Noguchi-Museum-New-York-Area-14--photo-Nicholas-Knight.jpg",
 		link: "https://archtober.org",
@@ -51,7 +51,7 @@ Site.buildings = [
 	},
 	{
 		title: "Bronx River House",
-		time: "Friday, May 17,<br>1:00 till 2:00pm",
+		time: "Friday, May 17,<br>1:00 – 2:00pm",
 		architect: "Kiss+Cathcart Architects",
 		image: "images/Construction_Image.jpg",
 		link: "https://archtober.org",
@@ -68,7 +68,7 @@ Site.appendInfo = function(){
 	Site.buildings.forEach(function(building, index){
 //onmouseover="this.style.backgroundColor='${building.style.color}'" onmouseout="this.style.backgroundColor='#D8CDCB'"
 		$("#arch_preview").append(`<li class="preview_building ${building.style.size}">
-				<h5>NYCxDesign Preview</h5>
+				<h5>NYCxDesign Building of the Day Preview</h5>
 				<h2>
 					<a href="${building.link}" target="_blank" style="background-color: ${building.style.color};">${building.title}</a>
 				</h2>

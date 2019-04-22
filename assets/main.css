@@ -4,6 +4,7 @@
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-family: Helvetica Neue, Helvetica, arial;
 }
 
 img[src=""] {
@@ -14,6 +15,61 @@ body, html{
 	font-size: 20px;
 	background-color: #D8CDCB;
 	scroll-behavior: smooth;
+}
+
+
+
+#banner{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	height: 3rem;
+	box-sizing: border-box;
+	background-color: rgba(99, 101, 105, 1);
+	overflow-y: hidden;
+	overflow-x: hidden;
+	white-space: nowrap; 
+	text-align: center;
+}
+
+@keyframes marquee{
+	0%{
+		transform: translate(100vw, 0px);
+	}
+	100%{
+		transform: translate(-3500px, 0px);
+	}
+}
+
+#banner_contents{
+	tranform: translate(100vw, 0px);
+	position: absolute;
+	top: 0.5rem;
+	left: 0;
+	display: block;
+	width: 3500px;
+	font-size: 1.5rem;
+	will-change: transform;
+	font-family: Helvetica Neue, Helvetica, arial, sans;
+	animation: marquee 40s infinite;
+	animation-delay: -5s;
+	color: #D8CDCB;
+	animation-timing-function: linear;
+}
+
+#banner_contents a{
+	text-decoration: none;
+	background-color: #D8CDCB;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	color: black;
+	display: inline-block;
+}
+
+#banner_contents a:hover{
+	background-color: black;
+	color: #D8CDCB;
 }
 
 #archtober_animation{
@@ -82,8 +138,8 @@ body, html{
 
 main{
 	position: relative;
-	margin-top: 83vh;
 	width: 100%;
+	margin-top: 83vh;
 	margin-bottom: 4rem;
 }
 
@@ -96,13 +152,22 @@ ul{
 	margin: 0.5rem;
 	padding: 1rem;
 	vertical-align: top;
-	background-color: rgba(67, 22, 10, 0.95);
+	background-color: rgba(66, 40, 42, 0.95);
 	margin-right: 10%;
 	margin-left: 1%;
 	padding-bottom: 2rem;
 	margin-bottom: 2rem;
 	color: white;
 	transition: margin-left 0.1s, margin-right 0.1s;
+}
+
+#arch_preview li.call_for_buildings{
+	/*background-color: rgba(99, 101, 105, 0.95);*/
+	background-color: rgba(255,255,255,0.95);
+	color: black;
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 4rem;
 }
 
 li.small{
@@ -118,7 +183,7 @@ li.large{
 }
 
 
-#arch_preview li:nth-of-type(2n){
+#arch_preview li.preview_building:nth-of-type(2n){
 	margin-right: 0.5rem;
 	margin-left: 35%;
 }
@@ -132,7 +197,7 @@ li.large{
 
 
 li * {
-	font-size: 0.95rem;
+	font-size: 0.9rem;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -153,7 +218,8 @@ li h4{
 }
 
 li h3, li h4{
-	font-size: 1.15rem;
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 li h5{
@@ -178,6 +244,11 @@ li a{
 	li a:hover{
 		background-color: #D8CDCB !important;
 	}
+
+	footer li a:hover{
+		background-color: black !important;
+		color: #D8CDCB;
+	}
 }
 
 .building_content{
@@ -191,13 +262,46 @@ li a{
 	padding-right: 1rem;
 }
 
+.building_content p, #arch_preview li.call_for_buildings p{
+	margin-bottom: 0.5rem;
+}
+
+
+.building_content p a, #arch_preview li.call_for_buildings p a{
+	font-weight: bold;
+	background-color: #D8CDCB;
+}
+
+@media(any-hover: hover){
+	.building_content p a:hover, #arch_preview li.call_for_buildings p a:hover{
+		background-color: black !important;
+		color: #D8CDCB;		
+	}
+}
+
+.building_content img, #arch_preview li.call_for_buildings img{
+	width: 100%;
+}
+
+#arch_preview li.call_for_buildings img{
+	margin-bottom: 0.25rem;
+}
+
+.building_content h5{
+	font-size: 0.6rem;
+	line-height: 0.7rem;
+	letter-spacing: 0.02rem;
+	text-transform: none;
+	font-family: Helvetica Neue, Helvetica, arial;
+}
+
 
 footer{
 	position: relative;
 	padding-bottom: 8rem;
 	padding-top: 2rem;
 	margin-top: 16rem;
-	background-color: rgba(99, 101, 105, 0.95);
+	background-color: rgba(99, 101, 105, 1);
 }
 
 
@@ -209,12 +313,18 @@ footer li{
 	width: 50%;
 }
 
+
 footer li p,footer li h2{
 	color: white;
+	font-weight: bold;
 }
 
 footer li p{
 	margin-bottom: 1rem;
+}
+
+footer li p a{
+	font-weight: bold;	
 }
 
 /* MOBILE STYLES */
@@ -229,6 +339,10 @@ footer li p{
 
 @media(max-width: 768px){
 	
+	#banner_contents{
+		animation-delay: -1s;
+	}
+
 	#intro_statement{
 		width: 95%;
 	}
@@ -252,7 +366,7 @@ footer li p{
 		margin-bottom: 2rem;
 	}
 
-	 #arch_preview li:nth-of-type(2n), #arch_preview li{
+	 #arch_preview li.preview_building:nth-of-type(2n), #arch_preview li, #arch_preview li.call_for_buildings{
 	 	width: 95%;
 	 	margin-left: 2.5%;
 	 	margin-right: 2.5%;

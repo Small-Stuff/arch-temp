@@ -12,6 +12,8 @@ Site.buildings = [
 			size: "small",
 			color: "#C028B9"
 		},
+		eventtype: "preview_building",
+		category: "NYCxDesign Building of the Day Preview",
 		description: "Leeser Architecture’s renovation and expansion of an existing, under-utilized building involves two user groups: BRIC Arts | Media | Brooklyn and UrbanGlass. Leeser Architecture juggled complex programmatic demands and highly specific uses to create an open and accessible arts facility that invites the community inside to engage with the myriad of activities occurring within.The project includes a full renovation of the interior space to create new theaters, television broadcasting studios, art galleries, glass workshops, media labs, classrooms, administrative and operation offices, and support spaces.",
 		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00002CIVxT"
 	},
@@ -26,6 +28,8 @@ Site.buildings = [
 			size: "medium",
 			color: "#FF4438"
 		},
+		eventtype: "preview_building",
+		category: "NYCxDesign Building of the Day Preview",
 		description: "An in-depth look at the design, construction and history of the iconic Frank Lloyd Wright-designed building. Ashley Mendelsohn, Assistant Curator of Architecture and Digital Initiatives, will give a tour that focuses on how the structure challenges curators, artists, and designers to reinvent the space anew for each exhibition.",
 		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00002CIVxY"
 	},
@@ -40,8 +44,26 @@ Site.buildings = [
 			size: "small",
 			color: "#0082CA"
 		},
+		eventtype: "preview_building",
+		category: "NYCxDesign Building of the Day Preview",
 		description: "A three-minute walk from the Staten Island Ferry, the National Lighthouse Museum tour will explore the history of the seven remaining buildings from the United States Lighthouse Establishment era (1864-1939). Built for the Treasury Department of the US Government, these buildings housed lampists, blacksmiths, clerks, engineers, and inspectors that helped supply the nation's light stations. This tour will also cover how lighthouse engineering and design changed over time.",
 		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00002CIVxi"
+	},
+	{
+		title: "Workplace Wednesday: LEVENBETTS",
+		time: "Wednesday, May 15<br>6:00 – 8:00pm",
+		architect: "",
+		image: "images/David_Stella_Image.jpg",
+		caption: "Image Credit: Square House, © Naho Kubota",
+		link: "https://archtober.org",
+		style:{ 
+			size: "medium",
+			color: "#D8CDCB"
+		},
+		eventtype: "workplace_wednesday",
+		category: "NYCxDesign Workplace Wednesday Preview",
+		description: "Archtober’s Workplace Wednesday program invites you to an exciting behind-the-scenes look at some of the most innovative architecture firms in NYC. This Workplace Wednesday we will be visiting LEVENBETTS!</p><p>LEVENBETTS was founded by David Leven and Stella Betts in 1997 and focuses on design at all scales including urban design, public architecture, houses and housing, commercial workspaces, exhibitions and furniture. The office employs a variety of methods to arrive at innovative solutions within the programs and sites of architecture. Central to our work is the idea of an architecture that engages its urban and or natural environment.",
+		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00001o2hh7"
 	},
 	{
 		title: "Noguchi Museum Renovation",
@@ -54,6 +76,8 @@ Site.buildings = [
 			size: "large",
 			color: "#FF5100"
 		},
+		eventtype: "preview_building",
+		category: "NYCxDesign Building of the Day Preview",
 		description: "Sage and Coombe worked with the Noguchi Museum in Long Island City, Queens for more than a decade to renovate and modernize the historic building in three phases, affording the Museum accessibility, allowing it to remain open year-round, and bringing it to the rigorous standards of contemporary museums – all while maintaining the unique character of the space. The renovation encompassed all areas of the Museum building and garden, with construction on the final phase completed in Spring 2016.",
 		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00002CIVxn"
 	},
@@ -68,6 +92,8 @@ Site.buildings = [
 			size: "medium",
 			color: "#789904"
 		},
+		eventtype: "preview_building",
+		category: "NYCxDesign Building of the Day Preview",
 		description: "The Bronx River Greenway River House, nearing completion, is the base of operations for the Bronx River Greenway and the adjacent portion of the Bronx River. The Bronx River Alliance will occupy the building and manage it on behalf of the park, the public, and community groups. The Bronx River House will approach net-zero energy and will use rainwater-irrigated living facades to create a favorable microclimate. The project received a Design Award from the Art Commission of the City of New York.",
 		registration: "https://aiany.secure.force.com/pmtx/evt__QuickEvent?id=a0b4N00002CIVxx"
 	}
@@ -85,8 +111,8 @@ Site.appendInfo = function(){
 
 	Site.buildings.forEach(function(building, index){
 //onmouseover="this.style.backgroundColor='${building.style.color}'" onmouseout="this.style.backgroundColor='#D8CDCB'"
-		$("#arch_preview").append(`<li class="preview_building ${building.style.size}">
-				<h5>NYCxDesign Building of the Day Preview</h5>
+		$("#arch_preview").append(`<li class="${building.eventtype} ${building.style.size}">
+				<h5>${building.category}</h5>
 				<h2>
 					<a href="${building.registration}" target="_blank" style="background-color: ${building.style.color};">${building.title}</a>
 				</h2>

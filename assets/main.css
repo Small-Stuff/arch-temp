@@ -161,6 +161,12 @@ ul{
 	transition: margin-left 0.1s, margin-right 0.1s;
 }
 
+#arch_preview li.workplace_wednesday{
+	background-color: rgba(255,255,255,0.95);
+	color: black;
+
+}
+
 #arch_preview li.call_for_buildings{
 	/*background-color: rgba(99, 101, 105, 0.95);*/
 	background-color: rgba(255,255,255,0.95);
@@ -183,10 +189,11 @@ li.large{
 }
 
 
-#arch_preview li.preview_building:nth-of-type(2n){
+#arch_preview li:nth-of-type(2n){
 	margin-right: 0.5rem;
 	margin-left: 35%;
 }
+
 
 @media(any-hover: hover){
 	/*#arch_preview li:hover, #arch_preview li:nth-of-type(2n):hover{
@@ -231,6 +238,10 @@ li h5{
 	color: #D8CDCB;
 }
 
+li.workplace_wednesday h5{
+	color: black;
+}
+
 li a{
 	display: inline-block;
 	background-color: #D8CDCB;
@@ -243,6 +254,11 @@ li a{
 @media(any-hover: hover){
 	li a:hover{
 		background-color: #D8CDCB !important;
+	}
+
+	li.workplace_wednesday a:hover{
+		background-color: black !important;	
+		color: #D8CDCB;
 	}
 
 	footer li a:hover{
@@ -366,7 +382,7 @@ footer li p a{
 		margin-bottom: 2rem;
 	}
 
-	 #arch_preview li.preview_building:nth-of-type(2n), #arch_preview li, #arch_preview li.call_for_buildings{
+	 #arch_preview li:nth-of-type(2n), #arch_preview li, #arch_preview li.call_for_buildings{
 	 	width: 95%;
 	 	margin-left: 2.5%;
 	 	margin-right: 2.5%;
